@@ -4,10 +4,10 @@ package model;
  *
  * @author Arley Bebe
  */
-public class Iversao {
+public class Inversao {
 
-
-    public static int invert(int n,int total){
+    
+    public static int inverter(int n,int total){
         
         if(n==0){
             
@@ -22,7 +22,7 @@ public class Iversao {
             System.out.println();
             
             
-            return invert(n/10,total*10+n%10);
+            return inverter(n/10,total*10+n%10);
         
         }
     
