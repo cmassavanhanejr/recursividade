@@ -8,7 +8,7 @@ package  model;
 import java.util.Vector;
 
 /**
- *
+ * Classe que possui metodo recursivo para calcular a soma de numeros em um vector
  * @author Arley Bebe
  */
 public class Soma {
@@ -28,11 +28,18 @@ public class Soma {
     
     }
     
-    public static int soma(Vector<Integer> v, int n){
-        if(n==v.size()){
+    /**
+    * Metodo que realiza a soma de numeros em vector
+     * @param v- vector
+     * @param i - indice a ser usado. sera sempre inicialido com 0
+     */
+    public static int soma(Vector<Integer> v, int i){
+        //verifica se o indice actual e igual ao tamanho do vector
+        if(i==v.size()){
             return 0;
         }
-        return v.get(n)+soma(v,n+1);
+        //chama novamente ele mesmo adicionando o o numero na posicao i
+        return v.get(i)+soma(v,i+1);
     }
     
 }
