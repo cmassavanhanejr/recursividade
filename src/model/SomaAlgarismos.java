@@ -6,18 +6,24 @@
 package  model;
 
 /**
- *
+ * Classe que contem metodo para calcular a soma dos algarismos de um numero de forma recursiva
  * @author Arley Bebe
  */
 public class SomaAlgarismos {
 
-   
+   /**
+   * Metodo recursivo para calcular a soma dos algarismos de um numero
+   *@param numero
+   *@param soma - vai armazenando a soma
+   */
     public static int somaAlgarismos(int numero, int soma){
-        
+        // Se o numero for menor que 1 ele retorna a soma
         if(numero<1){
             return soma;
         }
+        //soma + algarismo do numero(encontrado a partir do resto da divisao)
         soma+=(numero%10);
+       //chamada do propio metodo
         return somaAlgarismos(numero/10,soma);
         
     }    
