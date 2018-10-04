@@ -1,7 +1,7 @@
 package model;
 
 /**
- *
+ * Classe que contem algund metodos que calculam funcoes matematicas de forma recursiva
  * @author Arley Bebe
  */
 public class Recursividade {
@@ -16,6 +16,10 @@ public class Recursividade {
         System.out.println("");
     }
     
+    /**
+    *Metodo recursivo para calcular factorial de um numero
+    *@param numero
+    */
     public static int factorial(int numero){
     
         if(numero==1){
@@ -27,6 +31,11 @@ public class Recursividade {
         
     }
     
+    /**
+    *Metodo recursivo para calcular um maximo divisor comum
+    *@param a - indica o primeiro numero
+    *@param b - indica o segundo numero
+    */
     public static int mdc(int a,int b){
         
         if(b==0){
@@ -36,13 +45,25 @@ public class Recursividade {
         }
     }
     
+    /**
+    *Metodo recursivo para buscar a posicao de um numero num array
+    *@param numero - o numero o qual pretendemos buscar a sua posicao
+    *@param tamanho - tamanho do array
+    *@param array[] - que é o array o qual nos queremos fazer a pesquisa.
+    */
     public static int buscar (int numero, int tamanho,int array[]) {
-        
-        if (tamanho == 0) return -1;
-        if (numero == array[tamanho-1]) return tamanho-1;
+        //verifica se o tamanho e igual a zero
+        if (tamanho == 0) return -1; //se sim retorna -1 que signifca que o numero nao existe no array
+        //verifica se o numero esta na posicao tamanho -1 do array
+        if (numero == array[tamanho-1]) return tamanho-1; //retorna a posicao
+        //chama novamente o metodo para fazer a busca.
         return buscar (numero, tamanho-1, array); 
     }
     
+    /**
+    *Metodo recusivo para calcular o numero da posicao n da serie de fibonacci;
+    *@param n - posicao que queremos o numero
+    */
     public static int fibo(int n){
         
         if(n<2){
